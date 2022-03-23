@@ -2,15 +2,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let burger = document.querySelector(".hamburger"),
         header = document.querySelector(".header"),
-        bodyDontScroll = document.documentElement;
+        bodyDontScroll = document.documentElement,
+        menuitem = document.querySelectorAll(".menu__item"),
+        menuFlag = false;
 
-
-    burger.addEventListener("click", () => {
-        bodyDontScroll.classList.toggle("body-scroll");
-        header.classList.toggle("header--open");
-        burger.classList.toggle("hamburger__active");
-
-    })
+    if (burger){
+        burger.addEventListener("click", () => {
+            if(!menuFlag) {
+                bodyDontScroll.classList.add("body-scroll");
+                header.classList.add("header--open");
+                burger.classList.add("hamburger__active");
+                menuFlag = true;
+            }else{
+                bodyDontScroll.classList.remove("body-scroll");
+                header.classList.remove("header--open");
+                burger.classList.remove("hamburger__active");
+                menuFlag = false;
+            }
+        })
+    };
+    menuitem.forEach((item)=>{
+        item.addEventListener("click", () => {
+            bodyDontScroll.classList.remove("body-scroll");
+            header.classList.remove("header--open");
+            burger.classList.remove("hamburger__active");
+            menuFlag = false;
+        });
+    });
 
 
     const swiperGallery = new Swiper(".gallery__swiper", {
@@ -29,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     galleryVideo.forEach((item, i) => {
-        item.addEventListener("mouseenter", (e) => {
+        item.addEventListener("click", (e) => {
             galleryDecor[i].style.display = 'none';
             videoPlay[i].play();
         });
@@ -40,6 +58,37 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     })
+
+
+
+    window.scrollSmooth = (container = document) => {
+        const hrefAttributes = container.querySelectorAll("a[href*='#']");
+
+        hrefAttributes.forEach((item) => {
+            const href = item.href.split('#');
+
+            const CURRENT_URL = window.location.origin + window.location.pathname;
+
+            if (href[0] === CURRENT_URL) {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const scrollTarget = document.getElementById(href[1]);
+
+                    const topOffset = 10;
+                    const elementPosition = scrollTarget.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition - topOffset;
+
+                    window.scrollBy({
+                        top: offsetPosition,
+                        behavior: 'smooth',
+                    });
+                });
+            }
+        });
+    };
+
+    window.scrollSmooth();
     console.log("DOM fully loaded and parsed");
 })
 document.addEventListener("DOMContentLoaded",(function(){console.log("DOM fully loaded and parsed")}));

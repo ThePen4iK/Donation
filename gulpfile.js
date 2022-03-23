@@ -125,17 +125,17 @@ function clean() {
 }
 
 // Для билда проекта - gulp build
-function build() {
- return src(
-   [
-     "app/css/style.css",
-     "app/fonts/**/*",
-     "app/js/script.min.js",
-     "app/*.html",
-   ],
-   { base: "app" }
- ).pipe(dest("dist"));
-}
+// function build() {
+//  return src(
+//    [
+//      "app/css/style.css",
+//      "app/fonts/**/*",
+//      "app/js/script.min.js",
+//      "app/*.html",
+//    ],
+//    { base: "app" }
+//  ).pipe(dest("dist"));
+// }
 
 // Следим за всеми подпапками и файлами - gulp watchFiles
 function watchFiles() {

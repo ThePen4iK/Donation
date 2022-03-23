@@ -22,8 +22,14 @@
 
     width: 100%;
     max-width: 345px;
+
     @media(min-width: 576px){
       max-width: 335px;
+    }
+    @media(min-width: 992px){
+      &:last-child{
+        margin-bottom: 0px;
+      }
     }
     @media(min-width: 1440px){
       flex: 0 0 50%;
