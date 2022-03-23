@@ -4,24 +4,33 @@ document.addEventListener("DOMContentLoaded", function () {
         header = document.querySelector(".header"),
         bodyDontScroll = document.documentElement,
         menuitem = document.querySelectorAll(".menu__item"),
+        headerBtn = document.querySelector(".btn__header"),
         menuFlag = false;
 
-    if (burger){
+    if (burger) {
         burger.addEventListener("click", () => {
-            if(!menuFlag) {
+            if (!menuFlag) {
                 bodyDontScroll.classList.add("body-scroll");
                 header.classList.add("header--open");
                 burger.classList.add("hamburger__active");
                 menuFlag = true;
-            }else{
+            } else {
                 bodyDontScroll.classList.remove("body-scroll");
                 header.classList.remove("header--open");
                 burger.classList.remove("hamburger__active");
                 menuFlag = false;
             }
         })
-    };
-    menuitem.forEach((item)=>{
+
+        headerBtn.addEventListener("click", () => {
+            bodyDontScroll.classList.remove("body-scroll");
+            header.classList.remove("header--open");
+            burger.classList.remove("hamburger__active");
+            menuFlag = false;
+        });
+    }
+    ;
+    menuitem.forEach((item) => {
         item.addEventListener("click", () => {
             bodyDontScroll.classList.remove("body-scroll");
             header.classList.remove("header--open");
@@ -34,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiperGallery = new Swiper(".gallery__swiper", {
         slidesPerView: "auto",
         spaceBetween: 20,
+        allowTouchMove: false,
         loop: true,
         navigation: {
             nextEl: ".arrow__next",
@@ -60,10 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
 
-
     window.scrollSmooth = (container = document) => {
         const hrefAttributes = container.querySelectorAll("a[href*='#']");
-
         hrefAttributes.forEach((item) => {
             const href = item.href.split('#');
 
