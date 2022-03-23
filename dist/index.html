@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Donations</title>
+</head>
+
+
+
+  <body>
+  <header class="header">
+    <div class="container container__header">
+        <a href="index.html" class="logo">
+            <img src="./img/logo.png" alt="logo">
+        </a>
+        <div class="header__wrapper">
+            <nav class="header__navigation">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Achievments</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Gallery</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="btn btn__header">Donate</button>
+        </div>
+        <button class="hamburger">
+            <div class="hamburger__menu">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </div>
+        </button>
+    </div>
+</header>
+
+  <main class="main">
+    <section class="section start">
+    <div class="container">
+        <div class="start__wrapper">
+            <h1 class="start__text">We're a non-profit organization focused on helping the people of Ukraine to overcome
+                this terrible war</h1>
+            <button class="btn btn__start">Donate</button>
+        </div>
+    </div>
+    <picture class="picture">
+        <source
+            media="(min-width: 600px)"
+            srcset="../img/start-desck.jpg, ../img/start-desck@2x.jpg 2x"
+        />
+        <img class="start__img" src="../img/start.jpg" alt="start">
+    </picture>
+</section>
+
+    <section class="section achievements">
+    <div class="container container__achievements">
+        <h2 class="title achievements__title">Achievements:</h2>
+
+        <ul class="achievements__list">
+            <li class="achievements__item">
+                <span class="achievements__number">01</span>
+                <h3 class="achievements__subtitle">Trucks of Humanitarian</h3>
+                <p class="achievements__text">45+ trucks of Humanitarian aid were met on the Polish border. The goods
+                    were accepted, sorted, and forwarded to people in hot spots and regions experiencing a humanitarian
+                    disaster</p>
+            </li>
+
+            <li class="achievements__item">
+                <span class="achievements__number">02</span>
+                <h3 class="achievements__subtitle">Equipment</h3>
+                <p class="achievements__text">We continuously support the army with equipment like bulletproof vests,
+                    satellite phones, tactical gears and etc. We directly talk to hot spot representatives to better
+                    understand their needs and get advised by military experts on the products to supply</p>
+            </li>
+
+            <li class="achievements__item">
+                <span class="achievements__number achievements__number--mod">03</span>
+                <h3 class="achievements__subtitle">Manufacturing textile goods</h3>
+                <p class="achievements__text">We started an initiative of manufacturing textile goods inside Ukraine and
+                    supporting the national production of ballistic plates and bulletproof vests. We help with raw
+                    materials supply</p>
+            </li>
+
+            <li class="achievements__item">
+                <span class="achievements__number achievements__number--mod">04</span>
+                <h3 class="achievements__subtitle">Coordinate volunteers </h3>
+                <p class="achievements__text">We coordinate volunteers in finding specific equipment like long-range UAV
+                    and Night Vision</p>
+            </li>
+        </ul>
+
+        <picture class="picture">
+            <source
+                    media="(min-width: 600px)"
+                    srcset="../img/achievements-desck.jpg, ../img/achievements-desck@2x.jpg 2x"
+            />
+            <img class="achievements__img" src="../img/achievements.jpg" alt="achievements">
+        </picture>
+    </div>
+</section>
+
+    <section class="section gallery">
+    <div class="container">
+        <div class="gallery__wrapper">
+            <h2 class="title gallery__title">Gallery</h2>
+
+            <div class="slider__navigation">
+                <div class="arrow__prev">
+                    <svg class="arrow__icon" width="44" height="44" fill="none">
+                        <use xlink:href="../img/sprite.svg#arrow-prev"></use>
+                    </svg>
+                </div>
+                <div class="arrow__next">
+                    <svg class="arrow__icon" width="44" height="44" fill="none">
+                        <use xlink:href="../img/sprite.svg#arrow-next"></use>
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper gallery__swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide gallery__slide">
+                    <div class="gallery__wrap">
+                        <span class="gallery__decor"></span>
+                        <video loop playsinline class="gallery__slide-video"
+                         >
+                            <source src="../img/video/video-1.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+                <div class="swiper-slide gallery__slide">
+                    <picture class="picture">
+                        <source
+                                media="(min-width: 600px)"
+                                srcset="../img/gallery-desck-1.jpg, ../img/gallery-desck-1@2x.jpg 2x"
+                        />
+                        <img class="gallery__img"  src="../img/gallery-1.jpg" alt="gallery">
+                    </picture>
+                </div>
+                <div class="swiper-slide gallery__slide">
+                    <picture class="picture">
+                        <source
+                                media="(min-width: 600px)"
+                                srcset="../img/gallery-desck-2.jpg, ../img/gallery-desck-2@2x.jpg 2x"
+                        />
+                        <img class="gallery__img" src="../img/gallery-2.jpg" alt="gallery">
+                    </picture>
+                </div>
+
+                <div class="swiper-slide gallery__slide">
+                    <div class="gallery__wrap">
+                        <span class="gallery__decor"></span>
+                        <video loop playsinline class="gallery__slide-video"
+                        >
+                            <source src="../img/video/video-1.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+                <div class="swiper-slide gallery__slide">
+                    <picture class="picture">
+                        <source
+                                media="(min-width: 600px)"
+                                srcset="../img/gallery-desck-1.jpg, ../img/gallery-desck-1@2x.jpg 2x"
+                        />
+                        <img class="gallery__img"  src="../img/gallery-1.jpg" alt="gallery">
+                    </picture>
+                </div>
+                <div class="swiper-slide gallery__slide">
+                    <picture class="picture">
+                        <source
+                                media="(min-width: 600px)"
+                                srcset="../img/gallery-desck-2.jpg, ../img/gallery-desck-2@2x.jpg 2x"
+                        />
+                        <img class="gallery__img" src="../img/gallery-2.jpg" alt="gallery">
+                    </picture>
+                </div>
+
+                <div class="swiper-slide gallery__slide">
+                    <div class="gallery__wrap">
+                        <span class="gallery__decor"></span>
+                        <video loop playsinline class="gallery__slide-video"
+                        >
+                            <source src="../img/video/video-1.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+                <div class="swiper-slide gallery__slide">
+                    <picture class="picture">
+                        <source
+                                media="(min-width: 600px)"
+                                srcset="../img/gallery-desck-1.jpg, ../img/gallery-desck-1@2x.jpg 2x"
+                        />
+                        <img class="gallery__img"  src="../img/gallery-1.jpg" alt="gallery">
+                    </picture>
+                </div>
+                <div class="swiper-slide gallery__slide">
+                    <picture class="picture">
+                        <source
+                                media="(min-width: 600px)"
+                                srcset="../img/gallery-desck-2.jpg, ../img/gallery-desck-2@2x.jpg 2x"
+                        />
+                        <img class="gallery__img" src="../img/gallery-2.jpg" alt="gallery">
+                    </picture>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <section class="section support">
+    <div class="container">
+        <div class="support__wrapper">
+            <h4 class="support__title">Support Ukraine with a donation</h4>
+            <ul class="support__list">
+                <li class="support__item">
+                    <a href="#" class="support__link">
+                        <img class="support__img" src="../img/stripe.png" alt="stripe">
+                    </a>
+                </li>
+
+                <li class="support__item">
+                    <a href="#" class="support__link">
+                        <img class="support__img" src="../img/paypal.svg" alt="paypal">
+                    </a>
+                </li>
+                <li class="support__item">
+                    <a href="#" class="support__link">
+                        <img class="support__img" src="../img/venmo.svg" alt="venmo">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <section class="section follow">
+    <div class="container">
+        <ul class="follow__list">
+            <li class="follow__item">
+                <img class="follow__img" src="../img/follow-1.jpg" alt="follow-1">
+                <p class="follow__text">Our website where you can learn more about our organization</p>
+                <a href="#" class="follow__link">Website
+                    <svg class="follow__icon" width="14" height="13">
+                        <use xlink:href="../img/sprite.svg#follow-arrow"></use>
+                    </svg>
+                </a>
+            </li>
+
+            <li class="follow__item">
+                <img class="follow__img" src="../img/follow-2.jpg" alt="follow-2">
+                <p class="follow__text">Follow us on Facebook for the latest news and learn more about our organization</p>
+                <a href="#" class="follow__link">Facebook
+                    <svg class="follow__icon" width="14" height="13">
+                        <use xlink:href="../img/sprite.svg#follow-arrow"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+  </main>
+
+  <footer class="footer">
+    <div class="container container__footer">
+        <a href="index.html" class="logo logo--footer">
+            <img src="./img/logo-footer.png" alt="logo">
+        </a>
+        <p class="footer__text">There are many variants of Lorem Ipsum, but most of them have not always acceptable
+            modifications, such as humorous inserts or words that do not even remotely resemble Latin.</p>
+    </div>
+</footer>
+  <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+.container{
+  width: 100%;
+
+  max-width: 1430px;
+
+  margin: 0 auto;
+
+  padding: 0 15px;
+
+
+  @media(min-width: 1200px){
+    width: calc(100% - 70px);
+  }
+
+
+
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__achievements{
+    position: relative;
+
+    @media(min-width: 992px){
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__footer{
+    display: flex;
+    flex-direction: column;
+    @media(min-width: 992px){
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}

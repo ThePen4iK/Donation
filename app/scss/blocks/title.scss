@@ -1,0 +1,16 @@
+.title{
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  margin-bottom: 50px;
+  @media(min-width: 992px){
+    font-size: 64px;
+    line-height: 77px;
+    margin-bottom: 0;
+  }
+}
