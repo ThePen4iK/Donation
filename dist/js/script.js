@@ -5,7 +5,24 @@ document.addEventListener("DOMContentLoaded", function () {
         bodyDontScroll = document.documentElement,
         menuitem = document.querySelectorAll(".menu__item"),
         headerBtn = document.querySelector(".btn__header"),
-        menuFlag = false;
+        menuFlag = false,
+        startScreen = document.querySelector('.js-start'),
+        headerFixed = startScreen.offsetHeight;
+
+
+    window.onscroll = function () {
+        fixed();
+    }
+
+    function fixed() {
+        //&& window.pageYOffset >= headerFixed
+        if (window.scrollY > 0) {
+            header.classList.add("header__fixed");
+        } else {
+            header.classList.remove("header__fixed");
+        }
+    }
+
 
     if (burger) {
         burger.addEventListener("click", () => {
